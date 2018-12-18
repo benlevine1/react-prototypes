@@ -15,6 +15,13 @@ class App extends Component{
             contacts: [contact, ...this.state.contacts]
         })
     }
+    deleteContact = () =>{
+        console.log('clicked delete button', this.props.key, this.state.contacts)
+        const newContacts = this.state.contacts.filter();
+        this.setState({
+            contacts: newContacts
+        })
+    }
     render(){
         return (
         <div className="container">
@@ -23,7 +30,7 @@ class App extends Component{
                 <div className="col-4">
                     <ContactForm add = {this.addContact}/>
                 </div>
-                <ContactList contacts = {this.state.contacts}/>
+                <ContactList delete = {this.deleteContact} contacts = {this.state.contacts}/>
             </div>
         </div>
     )}

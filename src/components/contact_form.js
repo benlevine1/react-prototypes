@@ -44,8 +44,8 @@ class ContactForm extends Component{
                 <Field name = 'lastName' label = 'Last Name' type = 'text' value = {lastName} onChange = {this.handleInputChange}/>
                 <Field name = 'phone' label = 'Phone Number' type = 'text' value = {phone} onChange = {this.handleInputChange}/>
                 <Field name = 'email' label = 'Email' type = 'tel' value = {email} onChange = {this.handleInputChange}/>
-                <button>Add Contact</button>
-                <button type = 'button' onClick = {this.reset}>Clear Form</button>
+                <button className = 'btn btn-primary'>Add Contact</button>
+                <button className = 'btn' type = 'button' onClick = {this.reset}>Clear Form</button>
             </form>
         )}
 }

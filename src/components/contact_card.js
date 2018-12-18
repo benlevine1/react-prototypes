@@ -5,7 +5,9 @@ export default props =>{
     return (
         <div className="col-6 my-3">
             <div className="card">
-                <div className="card-header">{lastName}</div>
+                <div className="card-header">{lastName}
+                    <button key = {props.index} onClick = {props.delete} className = 'btn btn-danger float-right'>Delete</button>
+                </div>
                 <div className="card-block">
                     <h4 className="card-title">{firstName} {lastName}
                         <div className="card-text">
