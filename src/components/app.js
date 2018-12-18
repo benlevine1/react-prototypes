@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import ContactData from '../data/contacts.js'
 import ContactList from './contact_list'
 import ContactForm from './contact_form'
+import ContactData from '../data/contacts.js'
 
 class App extends Component{
     constructor(props){
@@ -11,9 +11,9 @@ class App extends Component{
         }
     }
     addContact=(contact)=>{
-        this.setState = {
+        this.setState({
             contacts: [contact, ...this.state.contacts]
-        }
+        })
     }
     render(){
         return (
