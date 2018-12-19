@@ -1,3 +1,4 @@
+
 import React, {Component} from 'react'
 import ContactList from './contact_list'
 import ContactForm from './contact_form'
@@ -36,4 +37,3 @@ class App extends Component{
     )}
 }
 export default App
-
