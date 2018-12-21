@@ -4,3 +4,12 @@
     position: relative;
     width: 80vw;
 }
+
+.scrapbook-image{
+    width: 25%;
+    border: 10px solid #fff;
+}
+
+.scrapbook-image:hover{
+    opacity: 0.3
+}
