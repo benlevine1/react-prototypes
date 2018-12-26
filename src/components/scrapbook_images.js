@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ImageModal from './image_modal'
 
 class ScrapbookImage extends Component{
     constructor(props){
@@ -22,18 +23,9 @@ class ScrapbookImage extends Component{
     render(){
         const{src, style} = this.props.about;
         return(
-            <div className = 'image-container'>
-            <div id="myModal" className="modal">
-                {/* <!-- The Close Button --> */}
-                <span className="close">&times;</span>
-
-                {/* <!-- Modal Content (The Image) --> */}
-                <img className="modal-content" src = {src}/>
-
-                {/* <!-- Modal Caption (Image Text) --> */}
-                <div id="caption"></div>
-            </div>
-            <img onClick ={this.showModal} className = 'scrapbook-image' src={src} style = {style}/>
+            <div>
+                <img onClick ={this.showModal} className = 'scrapbook-image' src={src} style = {style}/>
+                { this.state.show ? <ImageModal src = {src} click = {this.hideModal}/> : '' }
             </div>
             )
     }

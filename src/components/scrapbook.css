@@ -13,3 +13,7 @@
 .scrapbook-image:hover{
     opacity: 0.3
 }
+
+.modal.show{
+    display: block
+}
